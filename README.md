@@ -8,7 +8,7 @@ In this project, I built a comunity Blog magazine specialized in Plants, ecologi
 
 - Anyone can visualize the landing page which contains the most rated articles headers
 - A user should sign-up and log-in into the application to be able to read and vote for articles
-- A signed-up user could write and publish articles and could create for them a new categories
+- A signed-up user could write and publish articles in a given category
 - A logged-in user could access to a display of categories ordered by priority
 - A logged-in user could access to a display of any category articles sorted by most recent
 
