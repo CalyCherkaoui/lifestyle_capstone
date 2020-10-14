@@ -7,7 +7,7 @@ class Article < ApplicationRecord
   validates :title, length: { 
     minimum: 6,
     maximum: 80,
-    too_short: "must have at least %{count} words",
+    too_short: "must have at least %{count} caracters",
     too_long: "%{count} characters is the maximum allowed"
   }
   validates :text, presence: true, allow_blank: false
