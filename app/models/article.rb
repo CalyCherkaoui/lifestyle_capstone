@@ -10,7 +10,7 @@ class Article < ApplicationRecord
     too_short: "must have at least %{count} words",
     too_long: "%{count} characters is the maximum allowed"
   }
-  validates :text, presence: true
+  validates :text, presence: true, allow_blank: false
   validates :text, length: { 
     minimum: 10,
     too_short: "must have at least %{count} words"
