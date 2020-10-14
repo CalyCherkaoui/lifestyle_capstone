@@ -42,7 +42,7 @@ Home page with two scenarios : When user is Loged-in and when not:
 
 ## Data Models
 
-<img src="docs/erd.jpeg">
+<img src="docs/diagram.png">
 
 ## Development : Getting started
 
