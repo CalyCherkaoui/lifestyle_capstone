@@ -37,3 +37,6 @@ yarn-debug.log*
 
 # ignore stylelint
 node_modules/
+
+#ignore simplecov
+coverage
