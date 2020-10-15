@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :articles
+  has_many :articles, -> { order(created_at: :desc) }
   validates :name, presence: true, uniqueness: { case_sensitive: false }
   validates :name, length: {
     minimum: 2,
