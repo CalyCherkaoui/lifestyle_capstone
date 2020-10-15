@@ -1,2 +1,18 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>log-in new session</h1>
+
+
+<%= form_with(url: login_path, scope: :session, local: true) do |form| %>
+  <%= render 'shared/error_messages', my_model: @user %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Log-in'%>
+  </div>
+<% end %>
+
+<p>New user <%= link_to 'Sign-up now!', signup_path %></p>
+
