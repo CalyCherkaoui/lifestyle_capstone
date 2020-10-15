@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(name: params[:session][:name])
     if user
-      # loggig
+      # loggin
+      log_in(user)
       redirect_to root_path, notice: 'You have logged-in successfully!'
     else
       flash.now[:danger] = 'Invalid User name!'
