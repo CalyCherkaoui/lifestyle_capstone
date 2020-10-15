@@ -6,14 +6,14 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :title, length: {
     minimum: 6,
-    maximum: 80,
+    maximum: 80
     # too_short: "must have at least 6 characters",
     # too_long: "80 characters is the maximum allowed"
   }
-  # validates_length_of :title, :within => 6..80, :too_short => 'must have at least 6 characters', :too_long => '80 characters is the maximum allowed'
+
   validates :text, presence: true
   validates :text, length: {
-    minimum: 10,
+    minimum: 10
     # too_short: "must have at least 10 words"
   }
   validates :category_id, presence: true

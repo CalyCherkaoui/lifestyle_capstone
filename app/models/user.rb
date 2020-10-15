@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   validates :name, uniqueness: { case_sensitive: false }, presence: true
   validates :name, length: {
-    minimum: 3,
+    minimum: 3
     # too_short: 'must have at least 3 characters'
   }
 end
