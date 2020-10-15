@@ -24,7 +24,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to root_path, notice: 'Your account was successfully created! Enjoy your photosynthesis journey.'
+      log_in(@user)
+      redirect_to root_path
+      flash[:success] = 'Your account was successfully created! Enjoy your photosynthesis journey.'
     else
       render :new
     end
