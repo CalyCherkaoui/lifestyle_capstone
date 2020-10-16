@@ -2,6 +2,11 @@
   <%= render 'shared/error_messages', my_model: article %>
 
   <div class="field">
+    <%= form.label :image, 'Upload the Article image!' %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
