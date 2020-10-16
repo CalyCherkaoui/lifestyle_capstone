@@ -1,4 +1,9 @@
-<%= link_to 'Home', root_path %> | Category1 | Category2 | category3| <%= link_to 'All Categories', categories_path %> <%= link_to 'Sign-up', signup_path %> | 
+<%= link_to 'Home', root_path %> 
+<% @categories_important.each do |item| %>
+  <%= link_to item.name, category_path(item) %> |
+<% end %>
+<%= link_to 'All Categories', categories_path %>
+<%= link_to 'Sign-up', signup_path %> | 
 <% if logged_in? %>
   <%= link_to 'Profile', user_path(current_user) %>
   <%= link_to 'Log-out', logout_path, method: :delete %>
