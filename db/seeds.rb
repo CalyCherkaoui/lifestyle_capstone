@@ -13,24 +13,28 @@ categories = Category.create(
       priority: 1
     },
     {
-      name: 'Farming',
+      name: 'Science'
       priority: 2
     },
     {
-      name: 'Herbs',
+      name: 'Farming',
       priority: 3
     },
     {
-      name: 'Plant-care',
+      name: 'Herbs',
       priority: 4
     },
     {
-      name: 'Green-cities',
+      name: 'Plant-care',
       priority: 5
     },
     {
-      name: 'Green-food',
+      name: 'Green-cities',
       priority: 6
+    },
+    {
+      name: 'Green-food',
+      priority: 7
     }
   ]
 )
