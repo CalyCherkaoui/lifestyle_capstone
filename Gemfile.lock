@@ -273,6 +273,7 @@ DEPENDENCIES
   hirb (~> 0.7.3)
   image_processing (~> 1.2)
   listen (~> 3.2)
+  mini_magick
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
