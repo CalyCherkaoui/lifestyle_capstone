@@ -4,9 +4,7 @@ module SessionsHelper
   end
 
   def current_user
-    if session[:user_id]
-      @current_user || User.find_by(id: session[:user_id])
-    end
+    @current_user || User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
   def logged_in?
@@ -19,9 +17,9 @@ module SessionsHelper
   end
 
   def confirm_logged_in_user
-    unless logged_in?
-      flash[:danger] = 'Log-in is required to proceed!'
-      redirect_to login_path
-    end
+    return if logged_in?
+
+    flash[:danger] = 'Log-in is required to proceed!'
+    redirect_to login_path
   end
 end

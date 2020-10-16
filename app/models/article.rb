@@ -18,15 +18,13 @@ class Article < ApplicationRecord
   }
   validates :category_id, presence: true
 
-  scope :heros, -> { order(created_at: :asc).includes(:category, :author)}
+  scope :heros, -> { order(created_at: :asc).includes(:category, :author) }
 
   def votes_count
-    self.votes.count
+    votes.count
   end
 
   # def writen_articles(user_id)
   #   self
   # end
-
-  
 end

@@ -10,10 +10,9 @@ class Category < ApplicationRecord
   validates :priority, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
   scope :priority_sorted, -> { order(priority: :asc) }
-  scope :importants, -> { priority_sorted.limit(4)}
-  
-  def cover_article
-    self.articles.first
-  end
+  scope :importants, -> { priority_sorted.limit(4) }
 
+  def cover_article
+    articles.first
+  end
 end

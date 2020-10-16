@@ -9,6 +9,6 @@ class User < ApplicationRecord
   }
 
   def voted_articles
-    self.votes.articles.all
+    votes.articles.all
   end
 end
