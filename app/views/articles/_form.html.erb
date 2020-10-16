@@ -1,15 +1,5 @@
 <%= form_with(model: article, local: true) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-      <ul>
-        <% article.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render 'shared/error_messages', my_model: article %>
 
   <div class="field">
     <%= form.label :title %>
@@ -21,9 +11,17 @@
     <%= form.text_area :text %>
   </div>
 
+
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :category_id, 'category'%>
+    <%=
+      form.select :category_id,
+        options_from_collection_for_select(
+          Category.priority_sorted, :id, :name
+          ),
+      prompt: true,
+      :selected => 1
+    %>
   </div>
 
   <div class="actions">

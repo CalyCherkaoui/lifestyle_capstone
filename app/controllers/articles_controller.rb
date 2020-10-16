@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
+    @articles = Article.heros
+    @hero_article = Vote.most_voted_article
   end
 
   # GET /articles/1
@@ -12,14 +13,21 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    @categories = Category.all
   end
 
   # GET /articles/1/edit
-  def edit; end
+  def edit
+    @categories = Category.all
+  end
 
   # POST /articles
   def create
+    
+    
     @article = Article.new(article_params)
+    @article.author = current_user
+    
 
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
@@ -52,6 +60,6 @@ class ArticlesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def article_params
-    params.require(:article).permit(:title, :text, :user_id)
+    params.require(:article).permit(:title, :text, :category_id)
   end
 end
