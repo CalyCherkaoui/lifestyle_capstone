@@ -2,6 +2,9 @@ class Article < ApplicationRecord
   belongs_to :author, class_name: 'User'
   belongs_to :category
   has_many :votes, dependent: :destroy
+  has_one_attached :image
+
+  validates_attachement_content_type :image, content_type: ['image/jpg', 'image/png', 'image/jpeg']
 
   validates :title, presence: true
   validates :title, length: {
@@ -24,7 +27,4 @@ class Article < ApplicationRecord
     votes.count
   end
 
-  # def writen_articles(user_id)
-  #   self
-  # end
 end
