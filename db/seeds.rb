@@ -13,7 +13,7 @@ categories = Category.create(
       priority: 1
     },
     {
-      name: 'Science'
+      name: 'Science',
       priority: 2
     },
     {
@@ -37,4 +37,13 @@ categories = Category.create(
       priority: 7
     }
   ]
+)
+
+moderator = User.create(name: 'moderator')
+
+default_article = Article.create(
+  title: Faker::Lorem.sentence,
+  text: Faker::Lorem.paragraphs,
+  author: User.first,
+  category: Category.first
 )
