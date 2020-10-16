@@ -24,5 +24,9 @@ class Article < ApplicationRecord
     self.votes.count
   end
 
+  # def writen_articles(user_id)
+  #   self
+  # end
+
   
 end

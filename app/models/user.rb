@@ -7,4 +7,8 @@ class User < ApplicationRecord
     minimum: 3
     # too_short: 'must have at least 3 characters'
   }
+
+  def voted_articles
+    self.votes.articles.all
+  end
 end

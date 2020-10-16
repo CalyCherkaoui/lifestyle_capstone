@@ -16,8 +16,4 @@ class Category < ApplicationRecord
     self.articles.first
   end
 
-  # category.cover_article the mosted voted recent arcticle
-  # scope :most_voted, -> { with_votes.order(votes_count: :desc) }
-  # scope :with_votes, -> { select('articles.*, COUNT(votes.user_id) as votes_count').left_joins(:votes).group(:id) }
-  # scope :cover_article, -> { select('articles.*, ')  }
 end
