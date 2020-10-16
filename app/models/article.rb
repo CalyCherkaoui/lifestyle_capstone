@@ -1,10 +1,9 @@
 class Article < ApplicationRecord
+
   belongs_to :author, class_name: 'User'
   belongs_to :category
   has_many :votes, dependent: :destroy
   has_one_attached :image
-
-  validates_attachement_content_type :image, content_type: ['image/jpg', 'image/png', 'image/jpeg']
 
   validates :title, presence: true
   validates :title, length: {
@@ -25,6 +24,20 @@ class Article < ApplicationRecord
 
   def votes_count
     votes.count
+  end
+
+  def cover_image
+    return self.image.variant(resize: '100x100')
+  end
+
+  def hero_image
+    return self.image.variant(resize: '300x300')
+  end
+
+  private
+
+  def add_default_image
+    self.image.attach(io: File.open(Rails.root.join("app", "assets", "images", "default_article.jpg")), filename: 'default_article.jpg', content_type: 'image/jpg')
   end
 
 end

@@ -1,4 +1,16 @@
 <p id="notice"><%= notice %></p>
+<% if @article.image.attached? %>
+  <p>
+  <%= image_tag(@article.cover_image) %>
+  </p>
+
+  <p>
+  <%= image_tag(@article.hero_image) %>
+  </p>
+
+<% else %>
+  <%= image_tag(asset_path("default_article.jpg")) %>
+<% end %>
 
 <p>
   <strong>Title:</strong>
