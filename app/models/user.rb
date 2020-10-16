@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :articles
+  has_many :articles, foreign_key: :author_id, class_name: 'Article'
   has_many :votes, dependent: :destroy
 
   validates :name, uniqueness: { case_sensitive: false }, presence: true
@@ -7,4 +7,8 @@ class User < ApplicationRecord
     minimum: 3
     # too_short: 'must have at least 3 characters'
   }
+
+  def voted_articles
+    votes.articles.all
+  end
 end

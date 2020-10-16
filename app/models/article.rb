@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  belongs_to :user
+  belongs_to :author, class_name: 'User'
   belongs_to :category
   has_many :votes, dependent: :destroy
 
@@ -17,4 +17,14 @@ class Article < ApplicationRecord
     # too_short: "must have at least 10 words"
   }
   validates :category_id, presence: true
+
+  scope :heros, -> { order(created_at: :asc).includes(:category, :author) }
+
+  def votes_count
+    votes.count
+  end
+
+  # def writen_articles(user_id)
+  #   self
+  # end
 end

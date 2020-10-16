@@ -10,5 +10,11 @@
   <%= @category.priority %>
 </p>
 
+<% @articles.each do |article| %>
+
+<p> <% article.title %> | <%= link_to 'Read Article', article_path(article) %> </p>
+
+<% end %>
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

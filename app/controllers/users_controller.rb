@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1
-  def show; end
+  def show
+    @user = User.find(params[:id])
+  end
 
   # GET /users/new
   def new
@@ -22,7 +24,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      log_in(@user)
+      redirect_to root_path
+      flash[:success] = 'Your account was successfully created! Enjoy your photosynthesis journey.'
     else
       render :new
     end
@@ -31,7 +35,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to @user, notice: 'Your account was successfully updated.'
     else
       render :edit
     end
