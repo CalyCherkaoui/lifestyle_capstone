@@ -168,7 +168,7 @@
 
 /* Flash and alerts*/
 
-.flash_container {
+#flash_container {
   // background-color: $my_green;
   min-height: 5vh;
   
@@ -180,6 +180,7 @@
   opacity: 60%;
   font-size: 1.2rem;
   position: relative;
+  z-index: 20000;
 
   .closesign {
     text-decoration: none;
