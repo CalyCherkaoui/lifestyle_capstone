@@ -19,8 +19,9 @@ class Article < ApplicationRecord
     # too_short: "must have at least 10 words"
   }
   validates :category_id, presence: true
+  validates :image, presence: true
 
-  scope :heros, -> { order(created_at: :asc).includes(:category, :author) }
+  scope :heros, -> { order(created_at: :desc).includes(:author)}
 
   def votes_count
     votes.count
