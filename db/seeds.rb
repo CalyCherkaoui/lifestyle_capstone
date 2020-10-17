@@ -39,11 +39,24 @@ categories = Category.create(
   ]
 )
 
-moderator = User.create(name: 'moderator')
+# moderator = User.create(name: 'moderator')
 
-default_article = Article.create(
-  title: Faker::Lorem.sentence,
-  text: Faker::Lorem.paragraphs,
-  author: User.first,
-  category: Category.first
-)
+# default_articles = Article.create(
+#   [
+#     {
+#       title: Faker::Lorem.sentence,
+#       text: Faker::Lorem.paragraphs,
+#       author: User.first,
+#       category: Category.first,
+#       # image: 'https://images.pexels.com/photos/972391/pexels-photo-972391.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
+
+#     },
+#     {
+#       title: Faker::Lorem.sentence,
+#       text: Faker::Lorem.paragraphs,
+#       author: User.first,
+#       category: Category.last,
+#       # image: 'https://images.pexels.com/photos/972391/pexels-photo-972391.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
+#     }
+#   ]
+# )
