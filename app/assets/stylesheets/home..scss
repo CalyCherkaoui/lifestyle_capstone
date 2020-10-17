@@ -1,0 +1,111 @@
+@import 'settings.scss';
+
+.home_articles {
+  background-color: $color_bg_main;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: [row1-start] 4fr [row1-end row2-start] 2fr [row2-end];
+  grid-template-areas: 
+    "hero hero hero latest"
+    "wrapper wrapper wrapper wrapper ";
+}
+
+.hero_article {
+  grid-area: hero;
+  overflow: hidden;
+  position: relative;
+  background-color: $color_bg_main;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  z-index: 1;
+  img {
+    object-fit: cover;
+    object-position: center;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: 45%;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      color: $color_navigation_active;
+    }
+  }
+
+  .text {
+    padding: 2rem;
+    .title {
+      color: $color_home_hero_title;
+      font-family: $font_bold;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .content {
+      color: $color_home_hero_txt;
+      font-family: $font_small;
+      font-size: 1rem;
+    }
+  }
+}
+
+.latest_article {
+  // background-color: indigo;
+  grid-area: latest;
+  overflow: hidden;
+  position: relative;
+  background-color: $color_bg_main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: 45%;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    padding: 2rem;
+    &:hover {
+      cursor: pointer;
+      color: $color_navigation_active;
+    }
+  }
+
+  p {
+    color: $color_home_hero_txt;
+    font-family: $font_bold;
+    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.articles_wrapper {
+  background-color: lightblue;
+  grid-area: wrapper;
+  display: flex;
+  flex-direction: row;
+}
+
+.article {
+  width: 25%;
+  border-left: 2px solid blue;
+}
