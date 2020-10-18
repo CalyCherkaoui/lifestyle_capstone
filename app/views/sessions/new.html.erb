@@ -1,18 +1,34 @@
 <% provide(:title, 'Log-in')%>
-<h1>log-in new session</h1>
 
+<section class="sign_in_up">
+  <div class="auth_form_wrapper">
+    <div class="cover_deco_auth">
+    </div>
+    <div class="form_header">
+      <h1>LOG-IN</h1>
+    </div>
+    <div class="auth_form">
+      <div class="form_container">
 
-<%= form_with(url: login_path, scope: :session, local: true) do |form| %>
-  
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+        <%= form_with(url: login_path, scope: :session, local: true) do |form| %>
+    
+          <div class="field">
+            <%= form.label :name %>
+            <%= form.text_field :name, autofocus: true, placeholder: 'Type your name here!' %>
+          </div>
+    
+          <div class="actions">
+            <%= form.submit 'Log-in'%>
+          </div>
+        <% end %>
+
+        <div class="links">
+          <p>New user, <%= link_to 'Sign-up now!', signup_path %></p>
+        </div>
+
+      </div>
+
+    </div>
   </div>
-
-  <div class="actions">
-    <%= form.submit 'Log-in'%>
-  </div>
-<% end %>
-
-<p>New user <%= link_to 'Sign-up now!', signup_path %></p>
+</section>
 
