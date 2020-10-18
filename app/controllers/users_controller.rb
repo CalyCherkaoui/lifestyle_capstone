@@ -28,6 +28,7 @@ class UsersController < ApplicationController
       redirect_to root_path
       flash[:success] = 'Your account was successfully created! Enjoy your photosynthesis journey.'
     else
+      flash[:error] = @user.errors.full_messages.to_sentence
       render :new
     end
   end

@@ -1,19 +1,30 @@
 <% provide(:title, 'Sign-up')%>
-<h1>Sign-up new user</h1>
 
+<section class="sign_in_up">
+  <div class="auth_form_wrapper">
+    <div class="cover_deco_auth">
+    </div>
+    <div class="form_header">
+      <h1>SIGN-UP</h1>
+    </div>
+    <div class="auth_form">
+      <div class="form_container">
 
-<%= form_with(model: @user, local: true) do |form| %>
-  <%= render 'shared/error_messages', my_model: @user %>
+        <%= form_with(model: @user, local: true) do |form| %>
+          <%= render 'shared/error_messages', my_model: @user %>
+    
+          <div class="field">
+            <%= form.label :name %>
+            <%= form.text_field :name, autofocus: true, placeholder: 'Type your name here!' %>
+          </div>
+    
+          <div class="actions">
+            <%= form.submit 'Create your account'%>
+          </div>
+        <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+      </div>
+
+    </div>
   </div>
-
-  <div class="actions">
-    <%= form.submit 'Create my account'%>
-  </div>
-<% end %>
-
-
-<%= link_to 'Back to users', users_path %>
+</section>

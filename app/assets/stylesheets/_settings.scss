@@ -47,7 +47,7 @@ $color_article_link: #1c1918;
 $color_article_accent: #1c1918;
 
 // colors
-$my_dark:  #0A164E;
+$my_dark:  #272727;
 $my_green: #37A000;
 $my_green_dark: #008329;
 $my_light_green: #bcf5bc;
@@ -57,8 +57,10 @@ $my_yellow: #E6A01E;
 $my_yellow_dark: hsl(39, 92%, 35%);
 $light-blue: #2ab2c0;
 $classic-blue: #0f4c81;
+$dark_blue: #0A164E;
 $my_white: white;
 $my_grey: grey;
+$my_light_grey: #F2F2F2;
 /* Typography */
 
 // navigation typography
@@ -128,4 +130,8 @@ body {
   min-height: 100vh ;
   min-width: 22rem;
   display: block;
+}
+
+section {
+  max-width: 1440px;
 }
