@@ -35,6 +35,10 @@ categories = Category.create(
     {
       name: 'Green-food',
       priority: 7
+    },
+    {
+      name: 'Forest',
+      priority: 8
     }
   ]
 )
