@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  before_action :confirm_logged_in_user, only: %i[new edit update destroy]
 
   # GET /articles
   def index
