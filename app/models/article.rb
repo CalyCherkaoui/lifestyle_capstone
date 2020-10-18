@@ -29,11 +29,15 @@ class Article < ApplicationRecord
   end
 
   def cover_image
-    return self.image.variant(resize: '100x100')
+    return self.image.variant(resize: '200x200')
   end
 
   def hero_image
     return self.image.variant(resize: '300x300')
+  end
+
+  def display_image
+    return self.image.variant(resize: '1000x1000')
   end
 
   private
