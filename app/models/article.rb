@@ -22,6 +22,7 @@ class Article < ApplicationRecord
   validates :image, presence: true
 
   scope :heros, -> { order(created_at: :desc).includes(:author)}
+  scope :ordred_by_votes, -> { order(votes_count: :desc).includes(:category)}
 
   def votes_count
     votes.count

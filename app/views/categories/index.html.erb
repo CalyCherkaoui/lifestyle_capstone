@@ -8,7 +8,7 @@
 
       <% if category.latest_article.present? %>
 
-        <div class="category_img img<%= index %>" style=" background-image: url(<%= category.latest_article %>);">
+        <div class="category_img img<%= index %>" style=" background-image: url(<%= category.latest_article.image %>);">
             <%= category.name %>
         </div>
 

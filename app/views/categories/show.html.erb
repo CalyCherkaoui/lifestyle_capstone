@@ -1,21 +1,54 @@
-<% provide(:title, 'Category')%>
-<p id="notice"><%= notice %></p>
+<% provide(:title, @category.name )%>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<section class="category_section">
 
-<p>
-  <strong>Priority:</strong>
-  <%= @category.priority %>
-</p>
+    <% if @articles.empty? %>
 
-<% @articles.each do |article| %>
+        <div class="category_caption">
+          <div class="category_img" style="background-image: url(<%= asset_path('default.jpg') %>);">
+            <%= @category.name %>
+          </div>
+          <div class="category_content">
+            <p class="category_name">
+              <%= link_to categories_path do %>
+                  <%= @category.name %>
+              <%end%>
+              <p class="category_hero_title">More articles soon in this category ...</p>
+            </p>
+          </div>
+        </div>
 
-<p> <% article.title %> | <%= link_to 'Read Article', article_path(article) %> </p>
+    <% else %>
+      <% @articles.each_with_index do |article, index| %>
 
-<% end %>
+        <div class="category_caption">
+          <div class="category_img" style="background-image: url(<%= article.image %>);">
+            <%= @category.name %>
+          </div>
+          <div class="category_content">
+            <p class="category_name">
+              <%= link_to categories_path do %>
+                  <%= @category.name %>
+              <%end%>
+              <p class="category_hero_title"><%= article.title %></p>
+              <p class="category_hero_content">
+                  <%= truncate(article.text, :omission => "...", :length => 100) %>
+              </p>
+              <p class="caption_foot">
+                <%= link_to 'Read more..', article_path(article) %>
+                <div class="votes">
+                  <%= article.votes_count %> votes |
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+                  <%= link_to 'like', article_vote_path(article), method: :post%>
+
+                  <%= link_to 'Dislike', article_vote_path(article), method: :delete %>
+                </div>
+              </p>
+            </p>
+          </div>
+        </div>
+
+      <% end %>
+    <% end %>
+
+</section>
