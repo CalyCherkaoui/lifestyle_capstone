@@ -2,10 +2,10 @@
   <%= form_with(model: article, local: true) do |form| %>
     <div class="editor_article_content">
 
-              <div class="field">
-                <%= form.label :text, placeholder: "Add your content here!" %>
-                <%= form.text_area :text %>
-              </div>
+        <div class="editor_article_content_wrapper">
+          <p class="content_header">Article content:</p>
+          <%= form.text_area :text, class: "content_area", placeholder: "Add your content here!"%>
+        </div>
 
     </div>
     <div class="editor_article_header">
@@ -14,11 +14,11 @@
     <div class="editor_article_toolbox">
       <div class="editor_article_toolbox_container">
         
+        <% if article.image.attached? %>
+          <%= image_tag article.cover_image %>
+        <% end %>
+        
         <div class="form_fields">
-              <div class="field">
-                <%= form.label :image, 'Upload the Article image!' %>
-                <%= form.file_field :image %>
-              </div>
 
               <div class="field">
                 <%= form.label :title %>
@@ -27,6 +27,7 @@
 
               <div class="field">
                 <%= form.label :category_id, 'category'%>
+                <br>
                 <%=
                   form.select :category_id,
                     options_from_collection_for_select(
@@ -35,6 +36,11 @@
                   prompt: true,
                   :selected => 1
                 %>
+              </div>
+
+              <div class="upload_btn">
+                <%= form.file_field :image %>
+                <%= form.label :image, 'Click here to add an image to your article!'%>
               </div>
 
               <div class="actions">
