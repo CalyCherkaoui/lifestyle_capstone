@@ -1,5 +1,50 @@
 <% provide(:title, 'Categories')%>
-<p id="notice"><%= notice %></p>
+
+<section class="all_categories">
+
+  <% @categories.each_with_index do |category, index| %>
+
+    <div class="category_caption">
+
+      <% if category.latest_article.present? %>
+
+        <div class="category_img img<%= index %>" style=" background-image: url(<%= category.latest_article %>);">
+            <%= category.name %>
+        </div>
+
+        <div class="category_content content<%= index %>">
+          <p class="category_name">
+            <%= link_to category_path(category) do %>
+                <%= category.name %>
+            <%end%>
+          </p>
+          <p class="category_hero_title"><%= category.latest_article.title %></p>
+          <p class="category_hero_content">
+              <%= truncate(category.latest_article.text, :omission => "...", :length => 100) %>
+          </p>
+        </div>
+
+      <% else %>
+        <div class="category_img img<%= index %>" style=" background-image: url(<%= asset_path("default.jpg") %>);">
+            <%= category.name %>
+        </div>
+        <div class="category_content content<%= index %>">
+          <p class="category_name">
+            <%= link_to category_path(category) do %>
+                <%= category.name %>
+            <%end%>
+          </p>
+          <p class="category_hero_title">More articles soon in this category ...</p>
+        </div>
+      <% end %>
+
+    </div>
+
+  <% end %>
+
+
+
+</section>
 
 <h1>Categories</h1>
 
