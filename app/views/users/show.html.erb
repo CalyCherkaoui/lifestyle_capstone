@@ -18,7 +18,19 @@
   </div>
 
   <div class="user_profile_articles">
-    
+    <div class="tab_container" data-controller="tabs">
+      <div class="tab_button_container">
+        <button class="tab_button" data-action="click->tabs#activateTab" data-target="tabs.tabButton" value="0">My articles</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="1">Articles I liked</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="2">Most voted</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="3">Latest</button>
+      </div>
+
+      <div class="tab_panel" data-target="tabs.tabPanel">My articles</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Articles I liked</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Most voted</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Latest</div>
+    </div>
   </div>
 
 </div>
