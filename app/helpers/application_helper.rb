@@ -24,4 +24,8 @@ module ApplicationHelper
   def logged_in_author?(article)
     logged_in? && (current_user.id == article.author.id)
   end
+
+  def same_logged_in_user?(user)
+    logged_in? && (current_user.id == user.id)
+  end
 end

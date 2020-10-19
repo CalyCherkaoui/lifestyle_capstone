@@ -1,10 +1,25 @@
 <% provide(:title, 'Profile')%>
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="user_profile">
+
+  <div class="user_profile_header">
+    <div class="user_profile_name">
+      <p>Hey! I'm <%= @user.name %>.</p>
+      <p>Welcome to my profile page.</p>
+      <p>Find here all my articles written by me, and also my favorite ones.</p>
+    </div>
+
+    <% if same_logged_in_user?(@user) %>
+      <div class="user_profile_tool">
+        <%= link_to 'Add new article', new_article_path %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="user_profile_articles">
+    
+  </div>
+
+</div>
+

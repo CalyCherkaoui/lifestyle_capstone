@@ -125,3 +125,54 @@
     }
   }
 }
+
+/* Author-user profile */
+
+.user_profile {
+  background-color: $color_bg_main;
+  min-height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desktop));
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user_profile_header {
+  background-color: $my_white;
+  background-image: asset-data-url("patern.png");
+  padding: 4rem;
+  margin-top: 1rem;
+}
+
+.user_profile_name {
+  margin-bottom: 1rem;
+  p {
+    font-size: 1.3rem;
+    font-family: $font_bold;
+    font-weight: 600;
+    color: $color_logo_main;
+    line-height: 2rem;
+  }
+}
+
+.user_profile_tool {
+  // background-color: salmon;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  a {
+    text-decoration: none;
+    padding: 0.6rem;
+    background-color: $light-blue;
+    font-family: $font_bold;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $dark_blue;
+    border: 2px solid $classic-blue;
+    border-radius: 5px;
+    text-align: center;
+    &:hover {
+      color: $my_white;
+      background-color: $classic-blue;
+    }
+  }
+}
