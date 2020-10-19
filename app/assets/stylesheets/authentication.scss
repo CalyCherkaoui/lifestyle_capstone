@@ -1,7 +1,7 @@
 @import 'settings.scss';
 
 .sign_in_up {
-  height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desk));
+  height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desktop));
   background-color: white;
   background-image: asset-data-url("patern.png");
   margin-left: auto;
