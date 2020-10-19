@@ -20,12 +20,12 @@
         
         <div class="form_fields">
 
-              <div class="field">
+              <div class="article_editor_field">
                 <%= form.label :title %>
                 <%= form.text_field :title %>
               </div>
 
-              <div class="field">
+              <div class="article_editor_field">
                 <%= form.label :category_id, 'category'%>
                 <br>
                 <%=
@@ -38,12 +38,12 @@
                 %>
               </div>
 
-              <div class="upload_btn">
+              <div class="article_editor_upload_btn">
                 <%= form.file_field :image %>
                 <%= form.label :image, 'Click here to add an image to your article!'%>
               </div>
 
-              <div class="actions">
+              <div class="article_editor_actions">
                 <%= form.submit %>
               </div>
         </div>

@@ -26,7 +26,7 @@
 
     <div class="article_show_header">
       <span>By</span>
-      <%= link_to user_path(@article.author), class: 'author_name' do %>
+      <%= link_to user_path(@article.author), class: 'article_show_link' do %>
           <%= @article.author.name %>
       <% end %>
 
@@ -52,9 +52,9 @@
 
     <div class="article_show_foot">
 
-      <%= link_to 'like', article_vote_path(@article), method: :post%>
+      <%= link_to 'like', article_vote_path(@article), class: 'article_show_link', method: :post%>
       <span>|</span>
-      <%= link_to 'Dislike', article_vote_path(@article), method: :delete %>
+      <%= link_to 'Dislike', article_vote_path(@article), class: 'article_show_link', method: :delete %>
     </div>
 
   </div>

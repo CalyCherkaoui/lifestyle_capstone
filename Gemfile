@@ -57,7 +57,6 @@ group :test do
   gem 'shoulda', '~> 4.0'
   gem 'shoulda-context', '~> 2.0'
   gem 'shoulda-matchers', '~> 4.0'
-  gem 'simplecov', require: false
   gem 'webdrivers'
 end
 

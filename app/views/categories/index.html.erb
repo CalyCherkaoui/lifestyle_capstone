@@ -24,9 +24,9 @@
           <p class="category_hero_content">
               <%= truncate(category.latest_article.text, :omission => "...", :length => 300) %>
           </p>
-          <p class="category_hero_readmore">
-            <%= link_to 'Read more..', article_path(category.latest_article) %>
-          </p>
+
+            <%= link_to 'Read more..', article_path(category.latest_article), class: 'category_hero_readmore' %>
+
         </div>
 
       <% else %>
