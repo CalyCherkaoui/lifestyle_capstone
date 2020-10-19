@@ -4,6 +4,7 @@
 /* Palette */
 
 /* palette 1 pinky: #ac8181  grey: #cfceca white: #f8f8ff blue-dark: #253d5b */
+
 /* palette 2 white: #FFFFFF   beige: #F4F1E0  red: #F14C38  blue_dark: #144955 */
 // main
 $color_bg_main: rgb(78, 68, 62);
@@ -40,7 +41,7 @@ $color_category_link:#fb8237;
 $color_article_title: #3f3a37;
 $color_article_txt: #1c1918;
 $color_article_like: #008329;
-$color_article_dislike:#0A164E;
+$color_article_dislike:#0a164e;
 $color_article_author: #fb8237;
 $color_article_category: #faa924;
 $color_article_link: #1c1918;
@@ -48,30 +49,31 @@ $color_article_accent: #1c1918;
 
 // colors
 $my_dark:  #272727;
-$my_green: #38A169;
+$my_green: #38a169;
 $my_green_dark: #008329;
 $my_light_green: #bcf5bc;
 $tangerine: #da4221;
-$tangerine_dark: #D50000;
-$red_danger: #E53E3E;
-$my_yellow: #E6A01E;
+$tangerine_dark: #d50000;
+$red_danger: #e53e3e;
+$my_yellow: #e6a01e;
 $my_yellow_dark: hsl(39, 92%, 35%);
 $light-blue: #2ab2c0;
 $classic-blue: #0f4c81;
-$dark_blue: #0A164E;
+$dark_blue: #0a164e;
 $my_white: white;
 $my_grey: grey;
-$my_light_grey: #F2F2F2;
+$my_light_grey: #f2f2f2;
+
 /* Typography */
 
 // navigation typography
-$font_nav: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font_logo_main: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font_logo_second: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font_nav: "Montserrat", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font_logo_main: "Montserrat", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font_logo_second: "Montserrat", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 // Interface typography
 
-$font_bold: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font_bold: "Montserrat", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font_small: 'Raleway', sans-serif;
 
 // box models
@@ -127,7 +129,7 @@ html {
 body {
   background-color: $color_bg_main;
   width: 100%;
-  min-height: 100vh ;
+  min-height: 100vh;
   min-width: 22rem;
   display: block;
 }

@@ -1,7 +1,7 @@
 @import 'settings.scss';
 
 .sign_in_up {
-  height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desktop));
+  height: calc(100vh - var(--nav_height_desk) - var(--footer_height_desktop));
   background-color: white;
   background-image: asset-data-url("patern.png");
   margin-left: auto;
@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: [row1-start] 1fr [row1-end row2-start] 4fr [row2-end];
-  grid-template-areas: 
+  grid-template-areas:
     "cover form_header"
     "cover form";
   border-radius: 20px;
@@ -40,6 +40,7 @@
   align-items: center;
   justify-content: center;
   font-family: $font_bold;
+
   h1 {
     font-size: 2.5rem;
     color: $color_logo_second;
@@ -64,7 +65,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  
+
   .field,
   .action {
     // background-color: darkred;
@@ -72,6 +73,7 @@
     width: 100%;
     font-family: $font_small;
     color: $my_dark;
+
     label {
       font-size: 0.9rem;
       font-weight: 600;
@@ -104,6 +106,7 @@
       font-weight: 600;
       color: $classic-blue;
       background-color: $light-blue;
+
       &:hover {
         cursor: pointer;
         background-color: $classic-blue;
@@ -116,9 +119,11 @@
 .links {
   margin-top: 1rem;
   font-size: 0.7rem;
+
   a {
     text-decoration: none;
     margin-bottom: 0.6rem;
+
     &:hover {
       text-decoration: underline;
       transition: ease 2s;
@@ -130,7 +135,7 @@
 
 .user_profile {
   background-color: $color_bg_main;
-  min-height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desktop));
+  min-height: calc(100vh - var(--nav_height_desk) - var(--footer_height_desktop));
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -145,6 +150,7 @@
 
 .user_profile_name {
   margin-bottom: 1rem;
+
   p {
     font-size: 1.3rem;
     font-family: $font_bold;
@@ -159,6 +165,7 @@
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
+
   a {
     text-decoration: none;
     padding: 0.6rem;
@@ -170,6 +177,7 @@
     border: 2px solid $classic-blue;
     border-radius: 5px;
     text-align: center;
+
     &:hover {
       color: $my_white;
       background-color: $classic-blue;
@@ -206,6 +214,7 @@
     color: $my_white;
     font-weight: 800;
     border: none;
+
     &:hover {
       color: $color_logo_second;
       font-weight: 900;

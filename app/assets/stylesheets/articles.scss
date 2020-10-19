@@ -1,7 +1,7 @@
 @import 'settings.scss';
 
 .article_editor {
-  height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desktop));
+  height: calc(100vh - var(--nav_height_desk) - var(--footer_height_desktop));
   background-color: white;
   background-image: asset-data-url("patern.png");
   margin-left: auto;
@@ -9,13 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   form {
     min-height: 95%;
     min-width: 95%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: [row1-start] 1fr [row1-end row2-start] 4fr [row2-end];
-    grid-template-areas: 
+    grid-template-areas:
       "cover form_header"
       "cover form";
     border-radius: 20px;
@@ -30,15 +31,17 @@
   padding: 1.5rem;
 }
 
-.editor_article_content_wrapper{
+.editor_article_content_wrapper {
   // background-color: yellow;
   height: 98%;
+
   .content_header {
     font-size: 0.9rem;
     font-weight: 600;
     color: $color_logo_main;
     font-family: $font_bold;
   }
+
   .content_area {
     border: none;
     border-left: 2px solid $dark_blue;
@@ -59,6 +62,7 @@
   align-items: center;
   justify-content: center;
   font-family: $font_bold;
+
   h1 {
     font-size: 2.5rem;
     color: $color_logo_second;
@@ -104,12 +108,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
     input {
       width: 0.1px;
       height: 0.1px;
       opacity: 0;
       overflow: hidden;
     }
+
     label {
       display: flex;
       justify-content: center;
@@ -123,6 +129,7 @@
       font-weight: 600;
       color: $tangerine;
       background-color: $color_category_line;
+
       &:hover {
         cursor: pointer;
         background-color: $tangerine;
@@ -130,7 +137,7 @@
       }
     }
   }
-  
+
   .field,
   .action {
     // background-color: darkred;
@@ -138,6 +145,7 @@
     width: 100%;
     font-family: $font_small;
     color: $my_dark;
+
     label {
       font-size: 0.9rem;
       font-weight: 600;
@@ -158,6 +166,7 @@
       border: none;
       border-left: 1px solid $dark_blue;
     }
+
     select {
       height: 1.5rem;
       width: 100%;
@@ -180,6 +189,7 @@
       font-weight: 600;
       color: $classic-blue;
       background-color: $light-blue;
+
       &:hover {
         cursor: pointer;
         background-color: $classic-blue;
@@ -214,6 +224,7 @@
   width: 900px;
   max-height: 50vh;
   overflow: hidden;
+
   img {
     width: 900px;
     max-height: 66vh;
@@ -229,6 +240,7 @@
   // background-color: yellowgreen;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
   a {
     padding-right: 1rem;
     padding-left: 0.3rem;
@@ -239,6 +251,7 @@
     font-weight: 600;
     color: $my_white;
     cursor: pointer;
+
     &:hover {
       background-color: $my_white;
       color: $tangerine;
@@ -251,6 +264,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   p {
     font-size: 2rem;
     font-family: $font_bold;
@@ -278,6 +292,7 @@
     text-decoration: none;
     color: $color_logo_main;
     cursor: pointer;
+
     &:hover {
       color: $tangerine;
       border-bottom: 1px solid $tangerine;
@@ -299,6 +314,7 @@
 .article_show_content_wrapper {
   padding-left: 2rem;
   padding-right: 2rem;
+
   p {
     color: $color_article_txt;
     font-size: 1rem;
@@ -314,11 +330,13 @@
   background-image: asset-data-url("patern.png");
   width: 900px;
   padding: 3rem;
+
   p {
     font-family: $font_bold;
     font-size: 1.2rem;
     color: $dark_blue;
   }
+
   .toolbox {
     // background-color: yellow;
     width: 100%;
@@ -328,6 +346,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 0.3rem;
+
     a {
       text-decoration: none;
       padding: 0.6rem;
@@ -339,6 +358,7 @@
       border: 2px solid $classic-blue;
       border-radius: 5px;
       text-align: center;
+
       &:hover {
         color: $my_white;
         background-color: $classic-blue;

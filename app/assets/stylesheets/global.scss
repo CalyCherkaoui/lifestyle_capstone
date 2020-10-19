@@ -14,14 +14,16 @@
   // position: fixed;
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
+  top: 0;
   z-index: 4000;
+
   a {
     text-decoration: none;
   }
-  -webkit-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
-     -moz-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
-          box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+
+  -webkit-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+  -moz-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+  box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
 }
 
 .my-brand-nav {
@@ -68,6 +70,7 @@
   color: $color_navigation;
   text-transform: uppercase;
   position: relative;
+
   span {
     text-transform: lowercase !important;
   }
@@ -100,7 +103,6 @@
   transform: scale(1, 1);
 }
 
-
 @media screen and (min-width: 1160px) {
   .myheader {
     height: var(--nav_height_desk);
@@ -115,7 +117,7 @@
   }
 
   .my-nav-wrapper {
-    margin-top : 0.8rem;
+    margin-top: 0.8rem;
   }
 
   .my-nav-list {
@@ -139,7 +141,6 @@
     margin: 1rem;
   }
 
-
   .my-brand-nav {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -154,6 +155,7 @@
     height: var(--nav_height_mobile);
     flex-direction: row;
   }
+
   .my-brand-nav {
     padding-left: 0.5rem;
     padding-right: 0.2rem;
@@ -167,12 +169,12 @@
 
 
 
-/* Flash and alerts*/
+/* Flash and alerts */
 
 #flash_container {
   // min-height: 4vh;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 #flash_panel {
@@ -181,7 +183,6 @@
   margin-left: auto;
   margin-right: auto;
   width: 900px;
-
   padding: 1rem;
   font-size: 1.1rem;
   position: relative;
@@ -208,7 +209,7 @@
 }
 
 .success {
-  color: $my_white; 
+  color: $my_white;
   background-color: $my_green;
   border: 1px solid $my_green_dark;
   border-radius: 5px;
@@ -279,14 +280,18 @@ footer {
     text-decoration: none;
     cursor: pointer;
   }
+
   .copy_r {
     color: $color_navigation_active;
+
     &:hover {
       color: $my_white;
     }
   }
+
   .developer {
     color: $my_white;
+
     &:hover {
       color: $color_navigation_active;
     }
@@ -310,18 +315,22 @@ footer {
   align-items: center;
   justify-content: first baseline;
   padding: 1rem;
+
   a {
     margin-left: 0.5rem;
     text-decoration: none;
     cursor: pointer;
+
     i {
       color: $color_navigation_active;
       font-size: 1.5rem;
+
       &:hover {
         color: $my_white;
       }
     }
   }
+
   span {
     margin-left: 0.5rem;
     color: $my_white;
