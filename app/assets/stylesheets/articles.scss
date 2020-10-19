@@ -222,6 +222,27 @@
   }
 }
 
+.article_show_category {
+  // background-color: yellowgreen;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  a {
+    padding-right: 1rem;
+    padding-left: 0.3rem;
+    background-color: $tangerine;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: $font_bold;
+    font-weight: 600;
+    color: $my_white;
+    cursor: pointer;
+    &:hover {
+      background-color: $my_white;
+      color: $tangerine;
+    }
+  }
+}
+
 .article_show_title {
   padding: 2rem;
   display: flex;
