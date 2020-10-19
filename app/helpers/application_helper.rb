@@ -19,4 +19,9 @@ module ApplicationHelper
     when :warning then "Warning!"
     end 
   end
+
+  
+  def logged_in_author?(article)
+    logged_in? && (current_user.id == article.author.id)
+  end
 end

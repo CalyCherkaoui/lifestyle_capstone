@@ -194,6 +194,7 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
@@ -280,5 +281,44 @@
     font-family: $font_small;
     // font-weight: 600;
     line-height: 2rem;
+  }
+}
+
+.article_show_author_tool {
+  margin-top: 1.5rem;
+  background-color: $my_white;
+  background-image: asset-data-url("patern.png");
+  width: 900px;
+  padding: 3rem;
+  p {
+    font-family: $font_bold;
+    font-size: 1.2rem;
+    color: $dark_blue;
+  }
+  .toolbox {
+    // background-color: yellow;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.3rem;
+    a {
+      text-decoration: none;
+      padding: 0.6rem;
+      background-color: $light-blue;
+      font-family: $font_bold;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $dark_blue;
+      border: 2px solid $classic-blue;
+      border-radius: 5px;
+      text-align: center;
+      &:hover {
+        color: $my_white;
+        background-color: $classic-blue;
+      }
+    }
   }
 }
