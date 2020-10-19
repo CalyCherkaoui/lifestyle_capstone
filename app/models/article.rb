@@ -1,5 +1,4 @@
 class Article < ApplicationRecord
-
   belongs_to :author, class_name: 'User'
   belongs_to :category
   has_many :votes, dependent: :destroy
@@ -21,8 +20,8 @@ class Article < ApplicationRecord
   validates :category_id, presence: true
   validates :image, presence: true
 
-  scope :heros, -> { order(created_at: :desc).includes(:author)}
-  scope :ordred_by_votes, -> { order(votes_count: :desc).includes(:category)}
+  scope :heros, -> { order(created_at: :desc).includes(:author) }
+  scope :ordred_by_votes, -> { order(votes_count: :desc).includes(:category) }
   scope :with_attached_image, -> { includes(image_attachment: :blob) }
 
   def votes_count
@@ -30,21 +29,14 @@ class Article < ApplicationRecord
   end
 
   def cover_image
-    return self.image.variant(resize: '200x200')
+    image.variant(resize: '200x200')
   end
 
   def hero_image
-    return self.image.variant(resize: '300x300')
+    image.variant(resize: '300x300')
   end
 
   def display_image
-    return self.image.variant(resize: '1000x1000')
+    image.variant(resize: '1000x1000')
   end
-
-  private
-
-  def add_default_image
-    self.image.attach(io: File.open(Rails.root.join("app", "assets", "images", "default_article.jpg")), filename: 'default_article.jpg', content_type: 'image/jpg')
-  end
-
 end
