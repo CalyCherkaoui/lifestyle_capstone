@@ -3,7 +3,8 @@
 .sign_in_up {
   height: calc(100vh - var(--nav_height_desk) - var(--footer_height_desktop));
   background-color: white;
-  background-image: asset-data-url("patern.png");
+  // background-image: asset-data-url("patern.png");
+  background-image: url(/assets/patern.png);
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -26,7 +27,8 @@
 
 .cover_deco_auth {
   grid-area: cover;
-  background-image: url(asset_path("default.jpg"));
+  // background-image: url(asset_path("default.jpg"));
+  background-image: url(/assets/default.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -12,9 +12,9 @@
 
 .user_profile_header {
   background-color: $my_white;
-  background-image: asset-data-url("patern.png");
+  // background-image: asset-data-url("patern.png");
+  background-image: url(/assets/patern.png);
   padding: 4rem;
-  // margin-top: 1rem;
 }
 
 .user_profile_name {

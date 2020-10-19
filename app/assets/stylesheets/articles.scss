@@ -128,7 +128,8 @@
 .article_show_author_tool {
   margin-top: 1.5rem;
   background-color: $my_white;
-  background-image: asset-data-url("patern.png");
+  // background-image: asset-data-url("patern.png");
+  background-image: url(/assets/patern.png);
   width: 900px;
   padding: 3rem;
 
