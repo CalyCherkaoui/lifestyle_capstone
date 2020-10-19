@@ -10,7 +10,7 @@ class Category < ApplicationRecord
   validates :priority, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
   scope :priority_sorted, -> { order(priority: :asc) }
-  scope :importants, -> { priority_sorted.limit(5) }
+  scope :importants, -> { priority_sorted.limit(4) }
   scope :important_with_articles, -> {importants.includes(:articles)}
 
   def latest_article

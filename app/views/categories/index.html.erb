@@ -8,8 +8,10 @@
 
       <% if category.latest_article.present? %>
 
-        <div class="category_img img<%= index %>" style=" background-image: url(<%= category.latest_article.image %>);">
-            <%= category.name %>
+        <div class="category_img img<%= index %>">
+      
+          <%= image_tag(category.latest_article.image) %>
+
         </div>
 
         <div class="category_content content<%= index %>">
@@ -20,13 +22,16 @@
           </p>
           <p class="category_hero_title"><%= category.latest_article.title %></p>
           <p class="category_hero_content">
-              <%= truncate(category.latest_article.text, :omission => "...", :length => 100) %>
+              <%= truncate(category.latest_article.text, :omission => "...", :length => 300) %>
+          </p>
+          <p class="category_hero_readmore">
+            <%= link_to 'Read more..', article_path(category.latest_article) %>
           </p>
         </div>
 
       <% else %>
-        <div class="category_img img<%= index %>" style=" background-image: url(<%= asset_path("default.jpg") %>);">
-            <%= category.name %>
+        <div class="category_img img<%= index %>">
+            <%= image_tag(asset_path("default.jpg")) %>
         </div>
         <div class="category_content content<%= index %>">
           <p class="category_name">
@@ -42,9 +47,5 @@
 
   <% end %>
 
-
-
 </section>
 
-
-<%= link_to 'New Category', new_category_path %>

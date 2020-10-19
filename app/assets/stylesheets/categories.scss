@@ -12,7 +12,7 @@
 }
 
 .category_caption {
-  height: 200px;
+  height: 300px;
   width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -51,14 +51,25 @@
 }
 
 .category_img {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -o-object-fit: cover;
+    -o-object-position: center;
+    overflow: hidden;
+  }
 }
 
 .category_content {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .category_name {
     // background-color: lightcoral;
     height: 2.3rem;
@@ -92,6 +103,20 @@
     color: $color_category_txt;
     font-size: 0.8rem;
     font-family: $font_small;
+  }
+
+  .category_hero_readmore {
+    font-size: 1rem;
+    font-family: $font_bold;
+    font-weight: 600;
+    color: $tangerine;
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        color: $color_category_line;
+      }
+    }
   }
 }
 
