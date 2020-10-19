@@ -4,14 +4,16 @@ class VotesController < ApplicationController
 
   def create
     existing_vote = Vote.find_by(user_id: @voter.id, article_id: params[:article_id])
-    vote = Vote.new(user_id: @voter.id, article_id: params[:article_id])
 
-    if existing_vote.nil? && vote.save
-      flash[:notice] = 'Thank you for your like!'
-    elsif existing_vote && vote.save
-      flash[:warning] = "You\'ve already liked this article!"
+    if existing_vote.nil?
+      vote = Vote.new(user_id: @voter.id, article_id: params[:article_id])
+      if vote.save
+        flash[:notice] = 'Thank you for your like!'
+      else
+        flash[:danger] = vote.errors.full_messages
+      end
     else
-      flash[:danger] = vote.errors.full_messages
+      flash[:warning] = "You\'ve already liked this article!"
     end
     redirect_to article_path(params[:article_id])
   end
@@ -22,7 +24,7 @@ class VotesController < ApplicationController
       flash[:notice] = 'Thank you for your feed-back!'
     else
       existing_vote.destroy
-      flash[:notice] = 'You disliked this article!'
+      flash[:warning] = 'You disliked this article!'
     end
     redirect_to article_path(params[:article_id])
   end

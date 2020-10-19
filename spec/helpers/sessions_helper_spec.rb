@@ -11,10 +11,10 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe SessionsHelper, type: :helper do
-  let(:user) { FactoryBot.create :user }
+  let(:user) { User.create(name: 'person') }
   # @user = FactoryBot.create(:user)
   it 'Create session with a user to be logged in' do
     log_in(user)
-    expect(session[:user_id]).to eq(user)
+    expect(session[:user_id]).to eq(:user)
   end
 end

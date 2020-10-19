@@ -11,8 +11,9 @@ class Category < ApplicationRecord
 
   scope :priority_sorted, -> { order(priority: :asc) }
   scope :importants, -> { priority_sorted.limit(4) }
+  scope :important_with_articles, -> { importants.includes(articles: [image_attachment: :blob]) }
 
-  def cover_article
+  def latest_article
     articles.first
   end
 end

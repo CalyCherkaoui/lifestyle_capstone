@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1
   def show
-    @articles = @category.articles
+    @articles = @category.articles.with_attached_image
   end
 
   # GET /categories/new

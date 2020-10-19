@@ -1,10 +1,13 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  before_action :confirm_logged_in_user, only: %i[new edit update destroy]
 
   # GET /articles
   def index
-    @articles = Article.heros
+    @article_default = Article.first
+    @article_latest = Article.heros.first
     @hero_article = Vote.most_voted_article
+    @important_categories = Category.important_with_articles
   end
 
   # GET /articles/1
@@ -57,6 +60,6 @@ class ArticlesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def article_params
-    params.require(:article).permit(:title, :text, :category_id)
+    params.require(:article).permit(:title, :text, :category_id, :image)
   end
 end

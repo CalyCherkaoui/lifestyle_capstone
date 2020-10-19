@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       log_in(user)
       redirect_to root_path, notice: 'You have logged-in successfully!'
     else
-      flash.now[:danger] = 'Invalid User name!'
+      flash.now[:error] = 'Invalid User name!'
       render 'new'
     end
   end

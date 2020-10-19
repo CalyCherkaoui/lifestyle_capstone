@@ -12,9 +12,9 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.x'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks', '5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -24,6 +24,7 @@ gem 'turbolinks', '~> 5'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
+gem 'mini_magick'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -42,12 +43,11 @@ group :development do
   gem 'bullet', '~> 6.1'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'hirb', '~> 0.7.3'
-  gem 'listen', '~> 3.2'
   gem 'rubocop'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '4.0.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'listen', '3.2.1'
+  gem 'spring-watcher-listen', '2.0.1'
 end
 
 group :test do
@@ -57,7 +57,6 @@ group :test do
   gem 'shoulda', '~> 4.0'
   gem 'shoulda-context', '~> 2.0'
   gem 'shoulda-matchers', '~> 4.0'
-  gem 'simplecov', require: false
   gem 'webdrivers'
 end
 

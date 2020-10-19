@@ -1,9 +1,37 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'Profile')%>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="user_profile">
+
+  <div class="user_profile_header">
+    <div class="user_profile_name">
+      <p>Hey! I'm <%= @user.name %>.</p>
+      <p>Welcome to my profile page.</p>
+      <p>Find here all my articles written by me, and also my favorite ones.</p>
+    </div>
+
+    <% if same_logged_in_user?(@user) %>
+      <div class="user_profile_tool">
+        <%= link_to 'Add new article', new_article_path %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="user_profile_articles">
+    <div class="tab_container" data-controller="tabs">
+      <div class="tab_button_container">
+        <button class="tab_button" data-action="click->tabs#activateTab" data-target="tabs.tabButton" value="0">My articles</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="1">Articles I liked</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="2">Most voted</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="3">Latest</button>
+      </div>
+
+      <div class="tab_panel" data-target="tabs.tabPanel">My articles</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Articles I liked</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Most voted</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Latest</div>
+    </div>
+  </div>
+
+</div>
+

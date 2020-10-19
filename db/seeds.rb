@@ -13,24 +13,54 @@ categories = Category.create(
       priority: 1
     },
     {
-      name: 'Farming',
+      name: 'Science',
       priority: 2
     },
     {
-      name: 'Herbs',
+      name: 'Farming',
       priority: 3
     },
     {
-      name: 'Plant-care',
+      name: 'Herbs',
       priority: 4
     },
     {
-      name: 'Green-cities',
+      name: 'Plant-care',
       priority: 5
     },
     {
-      name: 'Green-food',
+      name: 'Green-cities',
       priority: 6
+    },
+    {
+      name: 'Green-food',
+      priority: 7
+    },
+    {
+      name: 'Forest',
+      priority: 8
     }
   ]
 )
+
+# moderator = User.create(name: 'moderator')
+
+# default_articles = Article.create(
+#   [
+#     {
+#       title: Faker::Lorem.sentence,
+#       text: Faker::Lorem.paragraphs,
+#       author: User.first,
+#       category: Category.first,
+#       # image: 'https://images.pexels.com/photos/972391/pexels-photo-972391.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
+
+#     },
+#     {
+#       title: Faker::Lorem.sentence,
+#       text: Faker::Lorem.paragraphs,
+#       author: User.first,
+#       category: Category.last,
+#       # image: 'https://images.pexels.com/photos/972391/pexels-photo-972391.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
+#     }
+#   ]
+# )

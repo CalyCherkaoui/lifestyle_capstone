@@ -1,0 +1,109 @@
+@import 'settings.scss';
+
+/* Author-user profile */
+
+.user_profile {
+  background-color: $color_bg_main;
+  min-height: calc(100vh - var(--nav_height_desk) - var(--footer_height_desktop));
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user_profile_header {
+  background-color: $my_white;
+  // background-image: asset-data-url("patern.png");
+  background-image: url(/assets/patern.png);
+  padding: 4rem;
+}
+
+.user_profile_name {
+  margin-bottom: 1rem;
+
+  p {
+    font-size: 1.3rem;
+    font-family: $font_bold;
+    font-weight: 600;
+    color: $color_logo_main;
+    line-height: 2rem;
+  }
+}
+
+.user_profile_tool {
+  // background-color: salmon;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  a {
+    text-decoration: none;
+    padding: 0.6rem;
+    background-color: $light-blue;
+    font-family: $font_bold;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $dark_blue;
+    border: 2px solid $classic-blue;
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+      color: $my_white;
+      background-color: $classic-blue;
+    }
+  }
+}
+
+.user_profile_articles {
+  // background-color: skyblue;
+  margin-top: 1.5rem;
+}
+
+.tab_container {
+  width: 100%;
+  min-height: 45vh;
+}
+
+.tab_button_container {
+  // background-color: rgb(33, 196, 236);
+  min-height: 3rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+
+  button {
+    margin: 0;
+    width: calc(100% / 4);
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: $font_bold;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: $my_white;
+    font-weight: 800;
+    border: none;
+
+    &:hover {
+      color: $color_logo_second;
+      font-weight: 900;
+      animation: fading 1s ease-out 0s;
+    }
+  }
+}
+
+.tab_button--active {
+  border-bottom: 2px solid $color_logo_second;
+  color: $color_logo_second;
+  font-weight: 900;
+}
+
+.tab_panel {
+  // background-color: yellow;
+  display: none;
+  padding: 4%;
+}
+
+.tab_panel--active {
+  display: block;
+}
