@@ -5,8 +5,8 @@
     <% if @articles.empty? %>
 
         <div class="category_caption">
-          <div class="category_img" style="background-image: url(<%= asset_path('default.jpg') %>);">
-            <%= @category.name %>
+          <div class="category_img">
+            <%= image_tag(asset_path('default.jpg')) %>
           </div>
           <div class="category_content">
             <p class="category_name">
@@ -23,7 +23,7 @@
 
         <div class="category_caption">
           <div class="category_img" style="background-image: url(<%= article.image %>);">
-            <%= @category.name %>
+            <%= image_tag(article.image) %>
           </div>
           <div class="category_content">
             <p class="category_name">

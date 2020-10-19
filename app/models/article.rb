@@ -23,6 +23,7 @@ class Article < ApplicationRecord
 
   scope :heros, -> { order(created_at: :desc).includes(:author)}
   scope :ordred_by_votes, -> { order(votes_count: :desc).includes(:category)}
+  scope :with_attached_image, -> { includes(image_attachment: :blob) }
 
   def votes_count
     votes.count
