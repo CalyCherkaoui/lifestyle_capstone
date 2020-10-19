@@ -170,16 +170,20 @@
 /* Flash and alerts*/
 
 #flash_container {
-  // background-color: $my_green;
-  min-height: 5vh;
-  
+  // min-height: 4vh;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 #flash_panel {
-  margin: 2%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+
   padding: 1rem;
-  opacity: 60%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: relative;
   z-index: 20000;
 
@@ -204,24 +208,24 @@
 }
 
 .success {
-  color: $my_white;
+  color: $my_white; 
   background-color: $my_green;
-  border: 2px solid $my_green_dark;
-  border-radius: 8px;
+  border: 1px solid $my_green_dark;
+  border-radius: 5px;
 }
 
 .danger {
   color: $my_white;
-  background-color: $tangerine;
-  border: 2px solid $tangerine_dark;
-  border-radius: 8px;
+  background-color: $red_danger;
+  border: 1px solid $tangerine_dark;
+  border-radius: 5px;
 }
 
 .warning {
-  color: $my_white;
-  background-color: $my_yellow;
-  border: 2px solid $my_yellow_dark;
-  border-radius: 8px;
+  color: $dark_blue;
+  background-color: $light_blue;
+  border: 1px solid $dark_blue;
+  border-radius: 5px;
 }
 
 /* Footer */

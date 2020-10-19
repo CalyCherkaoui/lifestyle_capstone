@@ -48,11 +48,12 @@ $color_article_accent: #1c1918;
 
 // colors
 $my_dark:  #272727;
-$my_green: #37A000;
+$my_green: #38A169;
 $my_green_dark: #008329;
 $my_light_green: #bcf5bc;
 $tangerine: #da4221;
 $tangerine_dark: #D50000;
+$red_danger: #E53E3E;
 $my_yellow: #E6A01E;
 $my_yellow_dark: hsl(39, 92%, 35%);
 $light-blue: #2ab2c0;
@@ -124,7 +125,7 @@ html {
 }
 
 body {
-  // background-color: $color_bg_main;
+  background-color: $color_bg_main;
   width: 100%;
   min-height: 100vh ;
   min-width: 22rem;
