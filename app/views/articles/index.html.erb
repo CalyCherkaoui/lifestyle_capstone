@@ -6,7 +6,9 @@
       <%= link_to(@hero_article) do %>
         <div class="text">
           <p class="title"><%= @hero_article.title %></p>
-          <p class="content"><%= @hero_article.text %></p>
+          <p class="content">
+              <%= truncate(@hero_article.text, :omission => "...", :length => 300) %>
+          </p>
         </div>
       <% end %>
     <% else %>
@@ -22,12 +24,10 @@
   <div class="latest_article">
     <% if @article_latest.present? %>
       <%= image_tag @article_latest.image %>
-      <%= link_to(@article_latest) do %>
-        <div class="text">
+      <%= link_to @article_latest, class: 'text' do %>
           <p>Read the latest article </p>
           <p>by <%=@article_latest.author.name%> :</p>
           <p><%= @article_latest.title %></p>
-        </div>
       <% end %>
     <% else %>
       <%= image_tag(asset_path("default.jpg")) %>
