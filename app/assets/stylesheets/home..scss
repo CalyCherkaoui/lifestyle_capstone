@@ -34,7 +34,7 @@
     position: absolute;
     top: 0;
     z-index: -1;
-    opacity: 60%;
+    opacity: 70%;
   }
   a {
     text-decoration: none;
@@ -82,7 +82,7 @@
     overflow: hidden;
     position: absolute;
     z-index: -1;
-    opacity: 70%;
+    opacity: 85%;
   }
 
   .text {
@@ -129,7 +129,7 @@
     overflow: hidden;
     position: absolute;
     top: 0;
-    opacity: 70%;
+    opacity: 85%;
   }
 
  .category {
@@ -159,6 +159,7 @@
     left: 0;
     z-index: 10;
     padding: 0.5rem;
+    padding-bottom: 2rem;
 
     text-decoration: none;
     font-size: 1rem;
