@@ -60,7 +60,7 @@ This project project was built following the specifications , and user cases giv
 
 ## Dependencies:
 
-Additional Gems and dependencies used in this web application:
+Iportant Gems and dependencies used in this web application:
 
 <table>
   <tr>
@@ -73,38 +73,61 @@ Additional Gems and dependencies used in this web application:
   <tr>
     <td>Postgresql</td>
     <td>Database</td>
-    <td><img src="https://github.githubass…moji/unicode/2611.png?v8"></td>
+    <td>⭐️</td>
     <td></td>
-    <td>:green_circle:</td>
+    <td>⭐️</td>
+  </tr>
+    <tr>
+    <td>Rspec</td>
+    <td>Testing framework</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Capybara</td>
+    <td>Features and Integration tests</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Shoulda Matchers</td>
+    <td>Models and association tests</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Database cleaner</td>
+    <td>Cleaning database</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
   </tr>
 </table>
 
 
-### In Development:
-database:
-- Postgresql
+## Linting tools:
 
-### In Tests:
-database:
-- Postgresql
+<table>
+  <tr>
+    <th>Linter</th>
+    <th>Use</th>
+    <th>Files</th>
+  </tr>
+  <tr>
+    <td>Rubocop</td>
+    <td>Linting Ruby errors</td>
+    <td>.rb</td>
+  </tr>
+    <tr>
+    <td>Stylelint</td>
+    <td>Linting styling errors</td>
+    <td>.css .scss</td>
+  </tr>
+</table>
 
-Testing tool:
-- Rspec
-
-Helpers:
-- Capybara
-- Shoulda matchers
-- Factories
-- Faker
-- Database_cleaner
-
-### In Production:
-database:
-- Postgresql
-
-## Linters:
-- For Ruby: Rubocop
-- For Scss/css : Styleling
 
 ## Data Models
 
