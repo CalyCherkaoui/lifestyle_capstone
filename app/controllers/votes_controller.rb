@@ -4,7 +4,6 @@ class VotesController < ApplicationController
   before_action :set_voter
 
   def create
-
     if @existing_vote.nil?
       vote = Vote.new(user_id: @voter.id, article_id: params[:article_id])
       if vote.save
