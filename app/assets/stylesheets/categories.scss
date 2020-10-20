@@ -4,7 +4,7 @@
 
 .all_categories {
   background-color: white;
-  // background-image: asset-data-url("patern.png");
+  // background-image: url(asset-data-url("patern.png"));
   background-image: url(/assets/patern.png);
   display: flex;
   flex-wrap: wrap;

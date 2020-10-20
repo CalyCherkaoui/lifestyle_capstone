@@ -1,64 +1,192 @@
 # Building Fotosynthesis Magazine with Rails
 
-## About the project
+## About the project:
 
 In this project, I built a comunity Blog magazine specialized in Plants, ecological farming, and home gardening.
+This is the Capstone project for the end Ruby On Rails Module in [Microverse](https://www.microverse.org/) currriculum
 
-## Use cases
+This project project was built following the specifications , and user cases given by Microverse
 
-- Anyone can visualize the landing page which contains the most rated articles headers
-- A user should sign-up and log-in into the application to be able to read and vote for articles
-- A signed-up user could write and publish articles in a given category
-- A logged-in user could access to a display of categories ordered by priority
-- A logged-in user could access to a display of any category articles sorted by most recent
+[Read the projects specifications](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561)
 
 
-## Demo:
+## Table of content:
 
-Home page with two scenarios : When user is Loged-in and when not:
+- [About the project](#about-the-project)
+- [Presentation/Demo](#presentation)
+- [Built with](#built-with)
+- [Dependencies](#dependencies)
+- [Getting started](#getting-started)
+- [Automated Tests](#automated-tests)
+- [Deployment](#deployment)
+- [Author](#author)
+- [Contributing](#contributing)
+- [Acknowledgments](#acknowledgments)
+- [License](#License)
+
+
+
+## Presentation/Demo:
+
+- Video-presentation of the project
+[Deom-video]()
+
+
+- Main views screenshots:
 <br>
 
-<img height="300" src="./app/assets/images/publicHome.png"><span> </span><img height="300" src="./app/assets/images/LogedinUserHome.png">
-<br><br>
+<img height="300" src="./app/assets/images/publicHome.png"><span> </span><img height="300" src="./app/assets/images/article.png">
+<br>
+<img height="300" src="./app/assets/images/signup.png"><span> </span><img height="300" src="./app/assets/images/category.png">
+<br>
+<img height="300" src="./app/assets/images/user.png"><span> </span><img height="300" src="./app/assets/images/editarticle.png">
+
 
 ## Built with:
 
-<a href="#" target="_blank"><img height="40" src="https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-horizontal.svg"></a>
-<a href="#" target="_blank"><img height="40" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"></a>
-<a href="#" target="_blank"><img height="40" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"></a>
-<a href="#" target="_blank"><img height="40" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg"></a>
+  <a href="https://www.ruby-lang.org/en/documentation/"><img width="10%" src="https://www.vectorlogo.zone/logos/ruby/ruby-ar21.svg" alt="Ruby"></a>
+  <a href="https://guides.rubyonrails.org/"><img width="50px" src="https://guides.rubyonrails.org/images/favicon.ico" alt="Rails"></a>
+  <a href="https://github.com/"><img width="5%" src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" alt="GitHub"></a>
+  <a href="#"><img width="60px" src="https://cdn.svgporn.com/logos/sass.svg"></a>
+  <a href="#"><img width="10%" src="https://media.giphy.com/media/kH6CqYiquZawmU1HI6/giphy.gif"></a>
+  <a href="#"><img width="10%" src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg"></a>
+  <a href="#"><img width="5%" src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp"></a>
+  <a href="#"><img width="30px" src="https://cdn.svgporn.com/logos/html-5.svg"></a>
+  <a href="#"><img width="30px" src="https://cdn.svgporn.com/logos/css-3.svg"></a>
+  <a href="#"><img width="50px" src="https://img.icons8.com/bubbles/2x/console.png"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img width="5%" src="https://media.giphy.com/media/ln7z2eWriiQAllfVcn/giphy.gif" alt="Javascript"></a>
+  <a href="#"><img width="50px" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg"></a>
 
-- Framework/API : ``Ruby on Rails``, ``Bulma``, ``Bootstrap``
-- Langage: ``Ruby``
-- Text-editor: ``Visual Studio Code``
 
-## Somme useful Gems added:
+## Dependencies:
 
-- Devise
-- bulma-rails
-- gravatar_image_tag
-- simple_form
-- rubocop
+Iportant Gems and dependencies used in this web application:
+
+<table>
+  <tr>
+    <th>Dependency</th>
+    <th>for</th>
+    <th>Development</th>
+    <th>Test</th>
+    <th>Production</th>
+  </tr>
+  <tr>
+    <td>Postgresql</td>
+    <td>Database</td>
+    <td>⭐️</td>
+    <td></td>
+    <td>⭐️</td>
+  </tr>
+    <tr>
+    <td>Rspec</td>
+    <td>Testing framework</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Capybara</td>
+    <td>Features and Integration tests</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Shoulda Matchers</td>
+    <td>Models and association tests</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Database cleaner</td>
+    <td>Cleaning database</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+</table>
+
+
+## Linting tools:
+
+<table>
+  <tr>
+    <th>Linter</th>
+    <th>Use</th>
+    <th>Files</th>
+  </tr>
+  <tr>
+    <td>Rubocop</td>
+    <td>Linting Ruby errors</td>
+    <td>.rb</td>
+  </tr>
+    <tr>
+    <td>Stylelint</td>
+    <td>Linting styling errors</td>
+    <td>.css .scss</td>
+  </tr>
+</table>
+
 
 ## Data Models
 
+<br>
+
 <img src="docs/diagram.png">
 
-## Development : Getting started
+<br><br>
+
+## Getting started
 
 To get a local copy of the repository please run the following commands on your terminal:
 
 ```
 $ git clone git@github.com:CalyCherkaoui/lifestyle_capstone.git
-$ cd gourmet_blog
+$ cd lifestyle_capstone
 $ git checkout development
 $ bundle install --without production
 $ yarn install --check-files
 $ rails db:create
 $ rails db:migrate
+$ rails db:seed
+```
+
+Start server with:
+```
+$ sudo service postgresql restart
 $ rails server
 ```
 In your browser's adress field, type : http://localhost:3000
+
+## Run tests
+```
+$ rpsec --format documentation
+```
+
+## Automated Tests:
+
+### Models
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
+
+### Helpers
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
+
+### Integrations
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
+
+### Features
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
+
+## Deployment:
+
+This web-application was deployed with Heroku and AWS S3 (for Active storage)
+
+Link to the webpage : 
 
 ## Author
 
@@ -79,8 +207,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
 - Design based on the work of [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) published in [Behance.net](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+- Hat tip to [stackoverflow](https://stackoverflow.com) comunity.
+- Hat tip to [Microverse](https://www.microverse.org/) TSE for Code Review
+- Hat tip to anyone whose code was used
 
 ## 📝 License
 
