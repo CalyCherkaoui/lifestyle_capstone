@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     @user = User.find(params[:id])
+    @liked_articles = @user.liked_articles.includes(image_attachment: :blob).includes(:category)
   end
 
   # GET /users/new
