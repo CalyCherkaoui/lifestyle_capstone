@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   
-  resources :categories
+  resources :categories, only: [:index, :show]
   resources :articles do
     post '/vote/', to: 'votes#create'
     delete '/vote/', to: 'votes#destroy'
   end
-  resources :users
+  resources :users, except: [:index, :edit, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
