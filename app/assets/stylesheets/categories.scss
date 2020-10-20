@@ -4,7 +4,6 @@
 
 .all_categories {
   background-color: white;
-  // background-image: url(asset-data-url("patern.png"));
   background-image: url(/assets/patern.png);
   display: flex;
   flex-wrap: wrap;
@@ -66,7 +65,6 @@
 }
 
 .category_name {
-  // background-color: lightcoral;
   height: 2.3rem;
   font-size: 1.1rem;
   color: $color_category_name;

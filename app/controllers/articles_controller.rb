@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @article_default = Article.first
     @article_latest = Article.heros.first
     @hero_article = Vote.most_voted_article
     @important_categories = Category.important_with_articles

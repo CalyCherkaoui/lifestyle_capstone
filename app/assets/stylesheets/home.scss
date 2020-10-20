@@ -1,7 +1,6 @@
 @import 'settings.scss';
 
 .home_articles {
-  // background-color: $color_bg_main;
   background-color: black;
   margin-left: auto;
   margin-right: auto;
@@ -17,7 +16,6 @@
 .article {
   width: 25%;
   height: 100%;
-  // border-left: 2px solid blue;
   position: relative;
 
   img {
@@ -126,7 +124,6 @@
 }
 
 .latest_article {
-  // background-color: indigo;
   grid-area: latest;
   overflow: hidden;
   position: relative;
@@ -171,7 +168,6 @@
 }
 
 .articles_wrapper {
-  // background-color: lightblue;
   grid-area: wrapper;
   display: flex;
   flex-direction: row;

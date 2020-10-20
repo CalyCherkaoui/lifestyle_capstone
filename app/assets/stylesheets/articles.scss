@@ -4,7 +4,6 @@
 
 .article_show {
   background-color: $color_bg_main;
-  // background-image: asset-data-url("patern.png");
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -16,12 +15,10 @@
 
 .article_show_wrapper {
   background-color: $my_white;
-  // background-image: asset-data-url("patern.png");
   width: 900px;
 }
 
 .article_show_image {
-  // background-color: crimson;
   width: 900px;
   max-height: 50vh;
   overflow: hidden;
@@ -38,7 +35,6 @@
 }
 
 .article_show_category {
-  // background-color: yellowgreen;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
@@ -108,7 +104,6 @@
 }
 
 .article_show_content {
-  // background-color: darksalmon;
   padding: 2rem;
 }
 
@@ -120,7 +115,6 @@
     color: $color_article_txt;
     font-size: 1rem;
     font-family: $font_small;
-    // font-weight: 600;
     line-height: 2rem;
   }
 }
@@ -128,7 +122,6 @@
 .article_show_author_tool {
   margin-top: 1.5rem;
   background-color: $my_white;
-  // background-image: asset-data-url("patern.png");
   background-image: url(/assets/patern.png);
   width: 900px;
   padding: 3rem;
@@ -140,7 +133,6 @@
   }
 
   .toolbox {
-    // background-color: yellow;
     width: 100%;
     margin-top: 1rem;
     padding-top: 0.5rem;

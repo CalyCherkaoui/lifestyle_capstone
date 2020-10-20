@@ -3,7 +3,6 @@
 .sign_in_up {
   height: calc(100vh - var(--nav_height_desk) - var(--footer_height_desktop));
   background-color: white;
-  // background-image: asset-data-url("patern.png");
   background-image: url(/assets/patern.png);
   margin-left: auto;
   margin-right: auto;
@@ -27,7 +26,6 @@
 
 .cover_deco_auth {
   grid-area: cover;
-  // background-image: url(asset_path("default.jpg"));
   background-image: url(/assets/default.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,11 +53,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // background-color: crimson;
 }
 
 .form_container {
-  // background-color: darkkhaki;
   height: 85%;
   width: 85%;
   display: flex;
@@ -70,7 +66,6 @@
 
   .field,
   .action {
-    // background-color: darkred;
     margin-bottom: 1rem;
     width: 100%;
     font-family: $font_small;

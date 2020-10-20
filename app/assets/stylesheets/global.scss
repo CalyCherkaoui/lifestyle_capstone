@@ -11,7 +11,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: $color_nav_bg;
-  // position: fixed;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -27,7 +26,6 @@
 }
 
 .my-brand-nav {
-  // padding-left: 1.5rem;
   padding-right: 1.5rem;
   font-size: 1.5rem;
   font-weight: 800;
@@ -179,7 +177,6 @@ footer {
 }
 
 .footer_brand {
-  // padding-left: 1.5rem;
   padding-right: 1.5rem;
   font-size: 1.2rem;
   font-weight: 800;
@@ -277,7 +274,6 @@ footer {
 /* Flash and alerts */
 
 #flash_container {
-  // min-height: 4vh;
   margin-left: auto;
   margin-right: auto;
 }
