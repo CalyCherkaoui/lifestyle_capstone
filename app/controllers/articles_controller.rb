@@ -32,6 +32,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
     else
+      flash[:error] = @article.errors.full_messages.to_sentence
       render :new
     end
   end
@@ -41,6 +42,7 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to @article, notice: 'Article was successfully updated.'
     else
+      flash[:error] = @article.errors.full_messages.to_sentence
       render :edit
     end
   end

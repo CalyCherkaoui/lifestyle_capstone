@@ -21,7 +21,7 @@ class VotesController < ApplicationController
   def destroy
     existing_vote = Vote.find_by(user_id: @voter.id, article_id: params[:article_id])
     if existing_vote.nil?
-      flash[:notice] = 'Thank you for your feed-back!'
+      flash[:notice] = "You've disliked this article! Thank you for your feed-back!"
     else
       existing_vote.destroy
       flash[:warning] = 'You disliked this article!'
