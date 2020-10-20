@@ -3,7 +3,7 @@ FactoryBot.define do
     name { Faker::Name.unique.name }
 
     factory :user_random do
-      sequence(:name) { |n| "person#{n}"}
+      sequence(:name) { |n| "person#{n}" }
     end
   end
 end
