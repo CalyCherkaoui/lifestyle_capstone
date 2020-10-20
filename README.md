@@ -37,7 +37,7 @@ This project project was built following the specifications , and user cases giv
 
 <img height="300" src="./app/assets/images/home.png"><span> </span><img height="300" src="./app/assets/images/category.png">
 <br>
-<img height="300" src="./app/assets/images/user_profile.png"><span> </span><img height="300" src="./app/assets/images/category.png">
+<img height="300" src="./app/assets/images/user_profile.png"><span> </span><img height="300" src="./app/assets/images/add_article.png">
 <br>
 <img height="300" src="./app/assets/images/signup.png"><span> </span><img height="300" src="./app/assets/images/article.png">
 
