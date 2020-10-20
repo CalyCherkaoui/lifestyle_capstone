@@ -35,11 +35,11 @@ This project project was built following the specifications , and user cases giv
 - Main views screenshots:
 <br>
 
-<img height="300" src="./app/assets/images/home.png"><span> </span><img height="300" src="./app/assets/images/category.png">
+<img width="400" src="./app/assets/images/home.png"><span> </span><img width="400" src="./app/assets/images/category.png">
 <br>
-<img height="300" src="./app/assets/images/user_profile.png"><span> </span><img height="300" src="./app/assets/images/add_article.png">
+<img width="400" src="./app/assets/images/user_profile.png"><span> </span><img width="400" src="./app/assets/images/add_article.png">
 <br>
-<img height="300" src="./app/assets/images/signup.png"><span> </span><img height="300" src="./app/assets/images/article.png">
+<img width="400" src="./app/assets/images/signup.png"><span> </span><img width="400" src="./app/assets/images/article.png">
 
 
 ## Built with:
