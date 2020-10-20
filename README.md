@@ -1,4 +1,4 @@
-# Building Phootosynthèse Magazine with Ruby on Rails
+# Building Photosynthèse Magazine with Ruby on Rails
 
 ## About the project:
 
