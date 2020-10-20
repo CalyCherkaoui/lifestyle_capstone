@@ -132,10 +132,11 @@
 }
 
 .field_with_errors {
+  height: 90%;
+
   + br {
     display: none;
   }
-  height: 90%;
 
   .content_area {
     border: none;
