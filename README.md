@@ -29,7 +29,7 @@ This project project was built following the specifications , and user cases giv
 ## Presentation/Demo:
 
 - Video-presentation of the project
-[Demo-video]()
+[Demo-video](https://youtu.be/Zny3mNp3-IE)
 
 
 - Main views screenshots:
@@ -180,7 +180,7 @@ $ rpsec --format documentation
 
 ## Deployment:
 
-This web-application was deployed with Heroku and AWS S3 (for Active storage)
+This web-application was deployed with Heroku
 
 Link to the webpage : 
 
