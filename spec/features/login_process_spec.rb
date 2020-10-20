@@ -1,10 +1,11 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
+
 RSpec.feature "LoginProcesses", type: :feature do
   scenario "User log-in to her/his account" do
     User.create(name: 'test_person')
     visit "/login"
-    # click_button('log-in')
     expect(current_path).to have_content('/login')
     fill_in('session[name]', with: 'test_person')
     click_button('Log-in')
