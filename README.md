@@ -17,6 +17,7 @@ This project project was built following the specifications , and user cases giv
 - [Built with](#built-with)
 - [Dependencies](#dependencies)
 - [Getting started](#getting-started)
+- [Automated Tests](#automated-tests)
 - [Deployment](#deployment)
 - [Author](#author)
 - [Contributing](#contributing)
@@ -60,6 +61,24 @@ This project project was built following the specifications , and user cases giv
 ## Dependencies:
 
 Additional Gems and dependencies used in this web application:
+
+<table>
+  <tr>
+    <th>Dependency</th>
+    <th>for</th>
+    <th>Development</th>
+    <th>Test</th>
+    <th>Production</th>
+  </tr>
+  <tr>
+    <td>Postgresql</td>
+    <td>Database</td>
+    <td><img src="https://github.githubass…moji/unicode/2611.png?v8"></td>
+    <td></td>
+    <td>:green_circle:</td>
+  </tr>
+</table>
+
 
 ### In Development:
 database:
@@ -121,6 +140,24 @@ In your browser's adress field, type : http://localhost:3000
 ```
 $ rpsec --format documentation
 ```
+
+## Automated Tests:
+
+### Models
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
+
+### Helpers
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
+
+### Integrations
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
+
+### Features
+<img height="300" src="./app/assets/images/publicHome.png">
+<br>
 
 ## Deployment:
 
