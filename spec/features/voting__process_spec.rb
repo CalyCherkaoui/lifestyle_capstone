@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'VotingProcesses', type: :feature do
   scenario 'Visitor log-in read article and like it' do
     author4 = User.create(name: 'test_person4')
@@ -19,7 +19,7 @@ RSpec.feature 'VotingProcesses', type: :feature do
                    author_id: author4.id,
                    category_id: category2.id)
 
-    visitor = User.create(name: 'test_person5')
+    User.create(name: 'test_person5')
 
     visit '/'
     click_link('Log-in')
@@ -61,7 +61,7 @@ RSpec.feature 'VotingProcesses', type: :feature do
                    author_id: author4.id,
                    category_id: category2.id)
 
-    visitor = User.create(name: 'test_person5')
+    User.create(name: 'test_person5')
 
     visit '/'
     click_link('Log-in')
@@ -91,3 +91,4 @@ RSpec.feature 'VotingProcesses', type: :feature do
     expect(page).to have_text(' You disliked this article!')
   end
 end
+# rubocop:enable Metrics/BlockLength
