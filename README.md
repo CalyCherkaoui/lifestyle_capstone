@@ -1,8 +1,8 @@
-# Building Fotosynthesis Magazine with Rails
+# Building Phootosynthèse Magazine with Ruby on Rails
 
 ## About the project:
 
-In this project, I built a comunity Blog magazine specialized in Plants, ecological farming, and home gardening.
+In this project, I built a comunity Blog magazine specialized in Plants, Ecological farming, and Home gardening.
 This is the Capstone project for the end Ruby On Rails Module in [Microverse](https://www.microverse.org/) currriculum
 
 This project project was built following the specifications , and user cases given by Microverse
@@ -29,17 +29,17 @@ This project project was built following the specifications , and user cases giv
 ## Presentation/Demo:
 
 - Video-presentation of the project
-[Deom-video]()
+[Demo-video]()
 
 
 - Main views screenshots:
 <br>
 
-<img height="300" src="./app/assets/images/publicHome.png"><span> </span><img height="300" src="./app/assets/images/article.png">
+<img height="300" src="./app/assets/images/home.png"><span> </span><img height="300" src="./app/assets/images/category.png">
 <br>
-<img height="300" src="./app/assets/images/signup.png"><span> </span><img height="300" src="./app/assets/images/category.png">
+<img height="300" src="./app/assets/images/user_profile.png"><span> </span><img height="300" src="./app/assets/images/category.png">
 <br>
-<img height="300" src="./app/assets/images/user.png"><span> </span><img height="300" src="./app/assets/images/editarticle.png">
+<img height="300" src="./app/assets/images/signup.png"><span> </span><img height="300" src="./app/assets/images/article.png">
 
 
 ## Built with:
@@ -167,19 +167,15 @@ $ rpsec --format documentation
 ## Automated Tests:
 
 ### Models
-<img height="300" src="./app/assets/images/publicHome.png">
-<br>
-
-### Helpers
-<img height="300" src="./app/assets/images/publicHome.png">
+<img height="300" src="./app/assets/images/models_test.png">
 <br>
 
 ### Integrations
-<img height="300" src="./app/assets/images/publicHome.png">
+<img height="300" src="./app/assets/images/Integration_test.png">
 <br>
 
 ### Features
-<img height="300" src="./app/assets/images/publicHome.png">
+<img height="300" src="./app/assets/images/features_test.png">
 <br>
 
 ## Deployment:
