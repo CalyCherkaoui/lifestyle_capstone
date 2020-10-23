@@ -9,7 +9,7 @@ This project project was built following the specifications , and user cases giv
 
 [Read the projects specifications](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561)
 
-[Link to the application in Heroku](https://radiant-hollows-40191.herokuapp.com/)
+[Link to the application in Heroku](https://damp-mesa-45432.herokuapp.com/)
 
 
 ## Table of content:
